@@ -1,1 +1,4 @@
 project_id = "waoqzipujgazvlloydoe"
+
+[functions.analyze-notes]
+verify_jwt = false
