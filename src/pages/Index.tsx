@@ -96,8 +96,8 @@ const Index = () => {
       <Header />
       <main className="max-w-4xl mx-auto p-6 space-y-6">
         <div className="text-center space-y-1 mb-8">
-          <h2 className="text-2xl font-bold text-foreground">Clinical Documentation Optimizer</h2>
-          <p className="text-muted-foreground">Paste notes below and upload MCG guidelines to optimize for insurance compliance.</p>
+          <h2 className="text-2xl font-bold text-foreground">Clinical Documentation Assistant</h2>
+          <p className="text-muted-foreground">Paste all clinical notes below and optionally upload an MCG Guideline PDF.</p>
         </div>
 
         {/* Clinical Notes Input */}
