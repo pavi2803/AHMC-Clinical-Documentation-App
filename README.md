@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# ClinDoc AI — Clinical Documentation Optimization System
 
-## Project info
+> Built for AHMC Health | AI-Powered Medical Documentation Tool
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+ClinDoc AI is a web-based clinical documentation optimization tool that helps physicians rewrite and improve their clinical notes to align with MCG (Milliman Care Guidelines) criteria — reducing insurance denials and improving documentation quality.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## The Problem
 
-Changes made via Lovable will be committed automatically to this repo.
+Physicians often write raw, shorthand clinical notes that are:
+- Missing critical details required by insurance companies
+- Not aligned with MCG admission criteria
+- Vulnerable to claim denials or downgrades
+- Inconsistent in structure and clarity
 
-**Use your preferred IDE**
+This leads to **denied claims, delayed reimbursements, and additional administrative burden** on clinical staff.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## The Solution
 
-Follow these steps:
+ClinDoc AI takes a physician's raw clinical notes and an MCG guideline PDF, and uses AI to:
+1. **Rewrite the notes** in a clear, structured, and insurance-compliant format
+2. **Identify documentation gaps** that could cause insurance denial or downgrade
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Single input box** for all clinical data — H&P, labs, vitals, imaging
+- **MCG PDF upload** — drag and drop guideline document
+- **Live section detector** — checks for HPI, vitals, labs, imaging, exam, and assessment in real time
+- **Revised clinical notes** — AI-rewritten for MCG compliance
+- **Missing criteria list** — numbered gaps with insurance risk explanations
+- **Copy buttons** on both output panels
+- **New Analysis** button to reset and start over
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Layer | Technology |
+|---|---|
+| Frontend | React (via Lovable) |
+| AI Engine | Google Gemini Flash |
+| Deployment | Lovable.app |
+| Styling | Inline React styles |
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Live Demo
 
-## What technologies are used for this project?
+🔗 **App:** https://ahmc-ai-clinicdoc.lovable.app/
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## How to Use
 
-## How can I deploy this project?
+**Step 1 — Paste Clinical Documentation**
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Paste all clinical information into the text box in one block:
+- Chief Complaint & HPI
+- Vital Signs
+- Lab Results
+- Imaging Findings
+- Physical Exam
+- Assessment & Plan
 
-## Can I connect a custom domain to my Lovable project?
+**Step 2 — Upload MCG Guideline PDF (Optional)**
 
-Yes, you can!
+Upload the MCG criteria PDF for the specific diagnosis. If no PDF is uploaded, the AI automatically applies standard inpatient MCG criteria.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Step 3 — Click Analyze & Optimize**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The AI processes both inputs and returns:
+- Fully rewritten clinical notes on the left
+- Numbered list of documentation gaps on the right
+
+---
